@@ -1,0 +1,6 @@
+<fest:template xmlns:fest="http://fest.mail.ru" context_name="json">
+    <div  class="big_field">
+        <h1>Score BOARD</h1>
+		<span class="js_back btn">Back btn</span>
+    </div>
+</fest:template>

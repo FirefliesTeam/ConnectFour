@@ -1,0 +1,8 @@
+<fest:template xmlns:fest="http://fest.mail.ru" context_name="json">
+    <div class="big_field">
+        <h1>Main Scene</h1>
+        <span class="js_scoreboard btn">Score btn</span>
+		<span class="js_startgame btn">Start btn</span>
+		<span class="js_login btn">Login btn</span>
+    </div>
+</fest:template>
