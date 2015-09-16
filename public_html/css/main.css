@@ -1,0 +1,20 @@
+.big_field {
+	display: inline-block;
+	width: 720px;
+	height: 480px;
+	background-color: lightgrey;
+	margin: 0 auto;
+	position:absolute;
+	left:50%;
+	margin-left: -360px;
+}
+
+.btn {
+	width: 100px;
+	height: 30px;
+	background-color: blue;
+	display: block;
+	margin: 10px;
+	padding-top: 12px;
+	padding-left: 40px;
+}
