@@ -1,10 +1,9 @@
 <fest:template xmlns:fest="http://fest.mail.ru" context_name="json">
-<<<<<<< HEAD
     <div class="big_field">
         <h1>Epic Game</h1>
 		<span class="js_back btn">Back btn</span>
     </div>
 </fest:template>
-=======
-</fest:template>
->>>>>>> tp/v2
+
+
+

@@ -1,5 +1,4 @@
 {
-<<<<<<< HEAD
   "name": "ConnectFour",
   "version": "0.0.1",
   "description": "Web Browser Game",
@@ -24,22 +23,7 @@
     "grunt-contrib-concat": "~0.5.1",
     "grunt-shell": "~1.1.2",
     "grunt-contrib-watch": "~0.6.1",
-    "grunt-concurrent": "~2.0.3"
-=======
-  "name": "epicgame",
-  "version": "0.1.0",
-  "description": "",
-  "main": "index.js",
-  "author": "a.eprev@gmail.com",
-  "license": "MIT",
-  "devDependencies": {
-    "grunt": "~0.4.2",
-    "grunt-cli": "^0.1.13",
-    "grunt-concurrent": "^1.0.0",
-    "grunt-contrib-connect": "~0.6.0",
-    "grunt-contrib-watch": "~0.5.3",
-    "grunt-fest": "~0.1.4",
-    "grunt-shell": "^1.1.1"
->>>>>>> tp/v2
+    "grunt-concurrent": "~2.0.3",
+    "grunt-fest": "~0.1.4"
   }
 }

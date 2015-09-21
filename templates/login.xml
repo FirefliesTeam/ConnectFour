@@ -1,5 +1,4 @@
-<<<<<<< HEAD
-<fest:template xmlns:fest="http://fest.mail.ru" context_name="json">
+<fest:template xmlns:fest="http://fest.mail.ru">
     <div class="big_field">
         <h1>Login Scene</h1>
         <h2>Тут Mail</h2>
@@ -7,7 +6,4 @@
         <span class="js_submit btn">Submit btn</span>
 		<span class="js_back btn">Back btn</span>
     </div>
-=======
-<fest:template xmlns:fest="http://fest.mail.ru">
->>>>>>> tp/v2
 </fest:template>

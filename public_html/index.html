@@ -1,72 +1,13 @@
 <!DOCTYPE html>
-<html><head>
-<<<<<<< HEAD
-    <meta charset="utf-8">
-    <link rel="stylesheet" href="/css/main.css"/>
-	<script src="/js/lib/jquery.js"></script>
-    <script src="/js/tmpl/main.js"></script>
-    <script src="/js/tmpl/scoreboard.js"></script>
-    <script src="/js/tmpl/game.js"></script>
-    <script src="/js/tmpl/login.js"></script>
-</head><body>
-    <div id="page">Привет!!!</div>
-
-	<script>
-        var $page = $('#page');
-
-        function showScoreboardScreen() {        
-            hideMainScreen();
-            $page.html(scoreboardTmpl());
-            $page.find('.js_back').on('click', showMainScreen);
-        }
-        function hideScoreboardScreen() {
-            $page.find('.js_back').off('click', showMainScreen);
-        }
-
-        function showGameScreen() {
-            hideMainScreen();
-            $page.html(gameTmpl());
-            $page.find('.js_back').on('click', showMainScreen);
-        }
-        function hideGameScreen() {
-            $page.find('.js_back').off('click', showMainScreen);
-        }
-
-        function showLoginScreen() {
-            hideMainScreen();
-            $page.html(loginTmpl());
-            $page.find('.js_back').on('click', showMainScreen);
-        }
-        function hideLoginScreen() {
-            $page.find('.js_back').off('click', showMainScreen);
-        }
-
-        function showMainScreen() {
-            hideMainScreen();
-            showScoreboardScreen();
-            showGameScreen();
-            
-            $page.html(mainTmpl()); 
-			
-			$page.find('.js_scoreboard').on('click', showScoreboardScreen);
-			$page.find('.js_startgame').on('click', showGameScreen);
-			$page.find('.js_login').on('click', showLoginScreen);
-        }
-        function hideMainScreen() {
-            $page.find('.js-scoreboard').off('click', showScoreboardScreen);
-			$page.find('.js_startgame').off('click', showGameScreen);
-			$page.find('.js_login').off('click', showLoginScreen);
-        }
-
-        showMainScreen();
-    </script>
+<html>
+<head>
     <script src="//localhost:35729/livereload.js"></script>
-=======
     <meta charset="utf-8" />
-    <title><!-- TODO --></title>
+    <title>ColorFour</title>
     <link rel="stylesheet" type="text/css" href="css/main.css" />
-</head><body>
+</head>
+<body>
     <div id="page"></div>
     <script data-main="js/main" src="js/lib/require.js"></script>
->>>>>>> tp/v2
-</body></html>
+</body>
+</html>

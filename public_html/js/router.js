@@ -11,8 +11,11 @@ define([
             'login': 'loginAction',
             '*default': 'defaultActions'
         },
+        
+        var $page =$("#page");
+        
         defaultActions: function () {
-            // TODO
+            this.navigate(#, {trigger: true});    
         },
         scoreboardAction: function () {
             // TODO
