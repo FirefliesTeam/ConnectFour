@@ -1,7 +1,11 @@
 define([
-    'backbone'
+    'backbone',
+    'views/main',
+    'views/scoreboard',
+    'views/login',
+    'views/game'
 ], function(
-    Backbone
+    Backbone, MainView, ScoreboardView, LoginView, GameView
 ){
 
     var Router = Backbone.Router.extend({
@@ -12,20 +16,26 @@ define([
             '*default': 'defaultActions'
         },
         
-        var $page =$("#page");
+        navigateTo: function(url) {
+            console.log("navigate to" + url);
+            this.navigate(url, {trigger:true});
+        },
         
         defaultActions: function () {
-            this.navigate(#, {trigger: true});    
+            console.log("url = #");
         },
+            
         scoreboardAction: function () {
-            // TODO
+            console.log("url = #scoreboard");
         },
         gameAction: function () {
-            // TODO
+            console.log("url = #game");
         },
         loginAction: function () {
-            // TODO
+            console.log("url = #login");
         }
+        
+        
     });
 
     return new Router();
