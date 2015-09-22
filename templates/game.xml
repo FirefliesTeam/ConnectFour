@@ -1,5 +1,5 @@
 <fest:template xmlns:fest="http://fest.mail.ru" context_name="json">
-    <div class="big_field">
+    <div class="main_window">
         <h1>Epic Game</h1>
 		<span class="js_back btn">Back btn</span>
     </div>

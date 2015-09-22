@@ -1,10 +1,16 @@
 <fest:template xmlns:fest="http://fest.mail.ru" context_name="json">
 
-    <div class="big_field">
-        <h1>Main Scene</h1>
-        <span class="js_scoreboard btn">Score btn</span>
-		<span class="js_startgame btn">Start btn</span>
-		<span class="js_login btn">Login btn</span>
+    <div class="main_window">
+        <span class="header__span__hover__blue"> MainMenu </span>
+        <a href="#game" class="a__not_decorated">
+            <span class="js_startgame btn__hover__orange">Start</span>
+        </a>
+        <a href="#scoreboard" class="a__not_decorated">
+            <span class="js_scoreboard btn__hover__orange">Score</span>
+        </a>
+		<a href="#login" class="a__not_decorated">
+    		<span class="js_login btn__hover__orange">Login</span>
+    	</a>
     </div>
 </fest:template>
 

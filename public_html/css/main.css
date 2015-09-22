@@ -1,20 +1,60 @@
-.big_field {
+.main_window {
 	display: inline-block;
 	width: 720px;
 	height: 480px;
-	background-color: lightgrey;
+    /*	background-color: #DCDCDC;*/
+    background-image: url("../background/table_bg.jpg");
+    background-size: contain;
 	margin: 0 auto;
 	position:absolute;
 	left:50%;
 	margin-left: -360px;
 }
 
-.btn {
+.btn__hover__orange {
 	width: 100px;
 	height: 30px;
-	background-color: blue;
+	background-color: #FF9032;
 	display: block;
 	margin: 10px;
 	padding-top: 12px;
 	padding-left: 40px;
+	 
+	
+}
+
+
+span.btn__hover__orange:hover {
+    margin-left: 64px;
+} 
+
+@font-face {
+    font-family: Gotham;
+    src: url(fonts/Gotham/GothaProLig.otf);
+    src: local(GothaProBla), url(../fonts/Gotham/GothaProLig.otf); 
+}
+
+body { 
+    font-family: Gotham;
+    font-size:18pt;
+}
+
+.header__span__hover__blue {
+	width: 128px;
+	height: 30px;
+	background-color: #05CAFE;
+	display: block;
+	margin: 10px;
+	margin-left: 64px;
+	padding: 12px;
+	        
+}
+
+span.header__span__hover__blue:hover {
+    background-color: #01BEF0;
+}
+
+a.a__not_decorated {
+    text-decoration: none;
+    color: #000000;
 }
