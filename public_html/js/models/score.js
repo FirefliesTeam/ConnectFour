@@ -1,5 +1,5 @@
 define([
-    'backbone'
+    'lib/backbone'
 ], function(
     Backbone
 ){
