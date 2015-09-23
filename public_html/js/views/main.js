@@ -19,7 +19,6 @@ define([
         
         initialize: function () {
             console.log("MainView has been created");
-            this.render();
         },
         
         render: function () {
@@ -31,6 +30,11 @@ define([
         
         hide: function () {
             $(this.el).hide();
+        },
+        
+        load: function () {
+            this.render();
+            this.show();
         },
         
         //------ EVENT FUNCTIONS ------------//

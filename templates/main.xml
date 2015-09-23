@@ -1,7 +1,9 @@
 <fest:template xmlns:fest="http://fest.mail.ru" context_name="json">
 
     <div class="main_window">
-        <span class="header__span__hover__blue"> MainMenu </span>
+        <a href="#" class="a__not_decorated" >
+            <span class="header__span__hover__blue"> Connect FOUR </span>
+        </a>
         <a href="#game" class="a__not_decorated">
             <span class="js_startgame btn__hover__orange">Start</span>
         </a>

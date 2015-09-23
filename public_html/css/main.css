@@ -25,7 +25,7 @@
 
 
 span.btn__hover__orange:hover {
-    margin-left: 64px;
+    margin-left: 32px;
 } 
 
 @font-face {
@@ -40,13 +40,14 @@ body {
 }
 
 .header__span__hover__blue {
-	width: 128px;
+	width: 90%;
 	height: 30px;
-	background-color: #05CAFE;
+	background-color: #ADD737;
 	display: block;
 	margin: 10px;
-	margin-left: 64px;
-	padding: 12px;
+	margin-left: 32px;
+	padding: 10px;
+	text-align: center;
 	        
 }
 

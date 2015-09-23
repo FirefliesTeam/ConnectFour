@@ -23,16 +23,20 @@ define([
         
         defaultActions: function () {
             console.log("url = #");
+            MainView.load();
         },
             
         scoreboardAction: function () {
             console.log("url = #scoreboard");
+            ScoreboardView.load();
         },
         gameAction: function () {
             console.log("url = #game");
+            GameView.load();
         },
         loginAction: function () {
             console.log("url = #login");
+            LoginView.load();
         }
         
         

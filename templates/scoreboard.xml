@@ -1,8 +1,13 @@
 <fest:template xmlns:fest="http://fest.mail.ru" context_name="json">
 
-    <div  class="big_field">
-        <h1>Score BOARD</h1>
-		<span class="js_back btn">Back btn</span>
+    <div  class="main_window">
+        <a href="#" class="a__not_decorated" >
+            <span class="header__span__hover__blue"> Connect FOUR </span>
+        </a>
+        <h2 align="center">Score BOARD</h2>
+		<a href="#" class="a__not_decorated">
+		    <span class="js_back btn__hover__orange">Back</span>
+		</a>
     </div>
 </fest:template>
 

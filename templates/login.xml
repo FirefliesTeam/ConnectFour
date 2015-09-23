@@ -1,9 +1,15 @@
 <fest:template xmlns:fest="http://fest.mail.ru">
-    <div class="big_field">
+    <div class="main_window">
+        <a href="#" class="a__not_decorated" >
+            <span class="header__span__hover__blue"> Connect FOUR </span>
+        </a>
         <h1>Login Scene</h1>
         <h2>Тут Mail</h2>
         <h2>Тут Password</h2>
-        <span class="js_submit btn">Submit btn</span>
-		<span class="js_back btn">Back btn</span>
+        
+        <span class="js_submit btn__hover__orange">Submit</span>
+		<a href="#" class="a__not_decorated">
+    		<span class="js_back btn__hover__orange">Back</span>
+    	</a>
     </div>
 </fest:template>

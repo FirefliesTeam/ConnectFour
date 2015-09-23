@@ -23,6 +23,10 @@ define([
         },
         hide: function () {
             $(this.el).hide()
+        },
+        load: function () {
+            this.render();
+            this.show();
         }
 
     });
