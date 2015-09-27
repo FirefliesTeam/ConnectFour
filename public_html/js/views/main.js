@@ -1,9 +1,7 @@
 define([
-    'router',
     'backbone',
     'tmpl/main'
 ], function(
-    Router,
     Backbone,
     tmpl
 ){
@@ -12,9 +10,7 @@ define([
         el: '.page',        
         template: tmpl,
         events: {
-            "click .js_startgame": "startgame",
-            "click .js_scoreboard": "showScoreboard",
-            "click .js_login": "login"
+
         },
         
         initialize: function () {
@@ -35,25 +31,9 @@ define([
         load: function () {
             this.render();
             this.show();
-        },
+        }
         
         //------ EVENT FUNCTIONS ------------//
-        
-        startgame: function() {
-            this.hide();
-            Router.navigateTo('game');
-        },
-        
-        showScoreboard: function() {
-            this.hide();
-            Router.navigateTo('scoreboard');
-        },
-        
-        login: function() {
-            this.hide();
-            Router.navigateTo('login');
-        }
-
     });
 
     return new MainView();

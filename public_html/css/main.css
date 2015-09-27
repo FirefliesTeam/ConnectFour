@@ -1,4 +1,10 @@
-.main_window {
+body { 
+    font-family: Gotham;
+    font-size:18pt;
+}
+
+
+.window {
 	display: inline-block;
 	width: 720px;
 	height: 480px;
@@ -11,20 +17,18 @@
 	margin-left: -360px;
 }
 
-.btn__hover__orange {
+.window__span_orange {
 	width: 100px;
 	height: 30px;
 	background-color: #FF9032;
 	display: block;
 	margin: 10px;
-	padding-top: 12px;
-	padding-left: 40px;
-	 
-	
+	padding: 8px;	 
+
 }
 
 
-span.btn__hover__orange:hover {
+.window__span_hover-moveRight:hover {
     margin-left: 32px;
 } 
 
@@ -34,12 +38,8 @@ span.btn__hover__orange:hover {
     src: local(GothaProBla), url(../fonts/Gotham/GothaProLig.otf); 
 }
 
-body { 
-    font-family: Gotham;
-    font-size:18pt;
-}
 
-.header__span__hover__blue {
+.window__span_green {
 	width: 90%;
 	height: 30px;
 	background-color: #ADD737;
@@ -51,11 +51,64 @@ body {
 	        
 }
 
-span.header__span__hover__blue:hover {
+.window__span_hover-blue:hover {
     background-color: #01BEF0;
 }
 
-a.a__not_decorated {
+a.window__a_decoration-none {
     text-decoration: none;
     color: #000000;
+}
+
+.window__header_align-center_white {
+    color:  #FFFFFF;
+    text-align: center;   
+}
+
+.window__span_text-size-little {
+    font-size:0.6em;
+}
+
+.form {
+    margin-left:10%;
+}
+
+.window__btn_green_border-none {
+    width: 100px;
+	height: 30px;
+	background-color: #ADD737;
+	display: block;
+	margin: 10px;
+	margin-left: 10%;
+	padding: 10px;
+	text-align: center;
+	border:0;
+}
+
+.window__btn_hover-blue:hover {
+	background-color: #01BEF0;
+}
+
+.form__label_border-green{
+    border: 2px solid #ADD737;
+    border-radius: 1px;
+}
+
+.form__input {
+    width: 260px;
+    margin: 0px 0px 0px 10px;
+    padding: 4px 9px;
+    color: #333;
+    background: #FFF;
+    border: 1px solid #b5b5b5;
+    border-radius: 3px;
+}
+
+.window__scoreList {
+    margin: 0% 24%;
+    border: 2px solid red;
+    width: 60%;
+}
+.scoreList__items {
+    border: 2px solid #FFFFFF;
 }

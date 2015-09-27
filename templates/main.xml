@@ -1,17 +1,17 @@
 <fest:template xmlns:fest="http://fest.mail.ru" context_name="json">
 
-    <div class="main_window">
-        <a href="#" class="a__not_decorated" >
-            <span class="header__span__hover__blue"> Connect FOUR </span>
+    <div class="window">
+        <a href="#" class="window__a_decoration-none" >
+            <span class="window__span_hover-blue window__span_green"> Connect FOUR </span>
         </a>
-        <a href="#game" class="a__not_decorated">
-            <span class="js_startgame btn__hover__orange">Start</span>
+        <a href="#game" class="window__a_decoration-none">
+            <span class="window__span_hover-blue window__span_orange">Start</span>
         </a>
-        <a href="#scoreboard" class="a__not_decorated">
-            <span class="js_scoreboard btn__hover__orange">Score</span>
+        <a href="#scoreboard" class="window__a_decoration-none">
+            <span class="window__span_hover-blue window__span_orange">Score</span>
         </a>
-		<a href="#login" class="a__not_decorated">
-    		<span class="js_login btn__hover__orange">Login</span>
+		<a href="#login" class="window__a_decoration-none">
+    		<span class="window__span_hover-blue window__span_orange">Login</span>
     	</a>
     </div>
 </fest:template>

@@ -1,15 +1,28 @@
 <fest:template xmlns:fest="http://fest.mail.ru">
-    <div class="main_window">
-        <a href="#" class="a__not_decorated" >
-            <span class="header__span__hover__blue"> Connect FOUR </span>
+
+    <div class="window">
+        <a href="#" class="window__a_decoration-none" >
+            <span class="window__span_green window__span_hover-blue"> Connect FOUR </span>
         </a>
-        <h1>Login Scene</h1>
-        <h2>Тут Mail</h2>
-        <h2>Тут Password</h2>
-        
-        <span class="js_submit btn__hover__orange">Submit</span>
-		<a href="#" class="a__not_decorated">
-    		<span class="js_back btn__hover__orange">Back</span>
+        <h2 class="window__header_align-center_white">Login</h2>
+        <form method="post" class="form window__form">
+            <p>
+                <label class="form__label_border-green">Username </label>
+                <input id="username" class="form__input" name="login" type="text" placeholder="Username"/>
+            </p>
+            <p>
+                <label class="form__label_border-green">Password </label>
+                <input id="password" class="form__input" name="password" type="password" placeholder="Password"/> 
+            </p>
+        </form>
+        <p>
+            <button class="window__btn_green_border-none window__btn_hover-blue" type="sumbit">Log in</button>
+		</p>
+		<a href="#" class="window__a_decoration-none">
+    		<span class="window__span_orange window__span_hover-blue window__span_text-size-little">Register now!</span>
+    	</a>
+		<a href="#" class="window__a_decoration-none">
+    		<span class="window__span_orange window__span_hover-blue">Back</span>
     	</a>
     </div>
 </fest:template>

@@ -16,7 +16,7 @@ define([
             console.log("ScoreboardView has been created");
         },
         render: function () {
-            this.$el.html(this.template)
+            this.$el.html(this.template);
         },
         show: function () {
             $(this.el).show()
