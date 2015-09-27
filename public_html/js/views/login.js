@@ -30,18 +30,15 @@ define([
         },
         
         login: function() {
-            var loginData = {
-                login: $("#username").val(),
-                password: $("#password").val()
-            };
             console.log($(".form").attr("action"));
             console.log($(".form").serialize())
-            $.post($(".form").attr("action"), $(".form").serialize(), function(isauth) {
-                console.log(isauth);
-                if(isauth) {
+            $.post($(".form").attr("action"), $(".form").serialize(), function(response) {
+                console.log(response);
+                console.log(response.auth);
+                if(response.auth) {
                     alert("You are logged in!");
                 } else {
-                    alert("Your login or password isn't correct");
+                    alert("Sorry, your login or password isn't correct");
                 }
             }, "json");
         }
