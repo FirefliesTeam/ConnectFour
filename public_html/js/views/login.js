@@ -30,13 +30,13 @@ define([
         },
         
         login: function() {
-            console.log($("#username").val());
-            console.log($("#password").val());
             var loginData = {
                 login: $("#username").val(),
                 password: $("#password").val()
             };
-            $.post("/login", loginData, function(isauth) {
+            console.log($(".form").attr("action"));
+            console.log($(".form").serialize())
+            $.post($(".form").attr("action"), $(".form").serialize(), function(isauth) {
                 console.log(isauth);
                 if(isauth) {
                     alert("You are logged in!");
