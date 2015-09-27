@@ -22,10 +22,10 @@
                 <label class="form__label_border-green">Password </label>
                 <input id="password2" class="form__input" name="password2" type="password" placeholder="Repeat your password"/> 
             </p>
+            <p>
+                <button class="form__btn_green_border-none js_sign_up" type="sumbit">Sign_up!</button>
+    		</p>
         </form>
-        <p>
-            <button class="form__btn_green_border-none js_sign_up" type="sumbit">Sign_up!</button>
-		</p>
 		<a href="#" class="window__a_decoration-none">
     		<span class="window__span_orange window__span_hover-blue">Back</span>
     	</a>
