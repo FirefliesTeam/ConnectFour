@@ -3,9 +3,10 @@ define([
     'views/main',
     'views/scoreboard',
     'views/login',
-    'views/game'
+    'views/game',
+    'views/signup'
 ], function(
-    Backbone, MainView, ScoreboardView, LoginView, GameView
+    Backbone, MainView, ScoreboardView, LoginView, GameView, SignUpView
 ){
 
     var Router = Backbone.Router.extend({
@@ -13,6 +14,7 @@ define([
             'scoreboard': 'scoreboardAction',
             'game': 'gameAction',
             'login': 'loginAction',
+            'signup': 'signupAction',
             '*default': 'defaultActions'
         },
         
@@ -37,6 +39,10 @@ define([
         loginAction: function () {
             console.log("url = #login");
             LoginView.load();
+        },
+        signupAction: function() {
+            console.log("url = #register");
+            SignUpView.load();
         }
         
         
