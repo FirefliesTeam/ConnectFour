@@ -9,8 +9,8 @@ define([
         defaults: {
             //Gamer name
             name: "",            
-            //Number of person wins
-            score: 0  
+            //Number of person's wins
+            score: 0,  
         },
         
         initialize : function() {

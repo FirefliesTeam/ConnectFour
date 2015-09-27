@@ -10,7 +10,7 @@ define([
         el: '.page',
         template: tmpl,
         events: {
-            
+            'click js_log_in': 'login'    
         },
         initialize: function () {
             console.log("LoginView has been created");

@@ -5,7 +5,7 @@
             <span class="window__span_green window__span_hover-blue"> Connect FOUR </span>
         </a>
         <h2 class="window__header_align-center_white">Sign up now!</h2>
-        <form method="post" class="form window__form">
+        <form method="post" class="form window__form" action="/register">
             <p>
                 <label class="form__label_border-green">Username </label>
                 <input id="username" class="form__input" name="login" type="text" placeholder="Username"/>
