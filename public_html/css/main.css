@@ -107,9 +107,27 @@ a.window__a_decoration-none {
 
 .window__scoreList {
     margin: 0% 24%;
-    border: 2px solid red;
+    border: 2px solid #ADD737;
+    padding:10px;
     width: 60%;
 }
-.scoreList__items {
+.scoreList {
     border: 2px solid #FFFFFF;
+    background: #FFFFFF;
+    padding:10px;
+}
+
+.scoreList__item {
+    border: 1px solid #FF9032;
+    margin: 2px;
+    padding:2px;
+}
+
+.scoreList__item__score {
+    float: right;
+    margin-right: 10px
+}
+
+.scoreList__item__name {
+
 }
