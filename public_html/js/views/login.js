@@ -30,11 +30,7 @@ define([
         },
         
         login: function() {
-            console.log($(".form").attr("action"));
-            console.log($(".form").serialize())
             $.post($(".form").attr("action"), $(".form").serialize(), function(response) {
-                console.log(response);
-                console.log(response.auth);
                 if(response.auth) {
                     alert("You are logged in!");
                 } else {

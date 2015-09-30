@@ -10,7 +10,7 @@ define([
         el: '.page',
         template: tmpl,
         events: {
-            'click .js_sign_up': 'signUpAction'
+            'click .js_sign_up': 'signUp'
         },
         initialize: function () {
             console.log("SignupView has been created");
@@ -29,8 +29,19 @@ define([
             this.show();
         },
         
-        signUpAction: function() {
-            
+        signUp: function() {
+            $.post($(".form").attr("action"), $(".form").serialize(), function(response) {
+              if(response.registered = true) {
+                    console.log("You have been registered");
+              } else if(response.login = "exist") {
+                    console.log("Choice another name, user with this name already exists");
+              } else if (!response.email) {
+                    console.log("Smth wrong with youe email");
+              } else if (!response.password) {
+                    console.log("Smth wrong with your password");
+              }
+              
+            }, "json");
         }
 
     });
