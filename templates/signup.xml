@@ -23,7 +23,7 @@
                 <input id="password2" class="form__input" name="password2" type="password" placeholder="Repeat your password"/> 
             </p>
             <p>
-                <button class="form__btn_green_border-none js_sign_up" type="sumbit">Sign_up!</button>
+                <button class="form__btn_green_border-none js_sign_up" type="button">Sign_up!</button>
     		</p>
         </form>
 		<a href="#" class="window__a_decoration-none">
