@@ -13,6 +13,9 @@
 		<a href="#login" class="window__a_decoration-none">
     		<span class="window__span_hover-blue window__span_orange">Login</span>
     	</a>
+		<a href="#" id="logout_btn" class="window__a_decoration-none">
+    		<span class="js_logout_btn window__span_hover-blue window__span_orange">LogOUT</span>
+    	</a>
 		<a href="#signup" class="window__a_decoration-none">
     		<span class="window__span_orange window__span_hover-blue window__span_text-size-little">Register now!</span>
     	</a>
