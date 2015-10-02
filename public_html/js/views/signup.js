@@ -31,16 +31,21 @@ define([
         
         signUp: function() {
             $.post($(".form").attr("action"), $(".form").serialize(), function(response) {
-              if(response.registered = true) {
-                    console.log("You have been registered");
-              } else if(response.login = "exist") {
-                    console.log("Choice another name, user with this name already exists");
-              } else if (!response.email) {
-                    console.log("Smth wrong with youe email");
-              } else if (!response.password) {
-                    console.log("Smth wrong with your password");
+            console.log(response);
+              if(response.signup) {
+                    alert("You have been registered");
+              } else {  
+                    alert("No, input correct data, please.")
+                   /*
+                    if(response.login = "exist") {
+                        console.log("Choice another name, user with this name already exists");
+                    } else if (!response.email) {
+                        console.log("Smth wrong with youe email");
+                    } else if (!response.password) {
+                        console.log("Smth wrong with your password");
+                    }
+                    */
               }
-              
             }, "json");
         }
 
