@@ -15,12 +15,12 @@ define([
         
         initialize: function () {
             console.log("MainView has been created");
-            $(".js_logout_btn").hide();
         },
         
         render: function () {
-            this.$el.html(this.template) 
-            $(".js_logout_btn").hide();
+            this.$el.html(this.template);
+            $(".js_logout_btn").hide();     
+            this.checkAuth();
         },
         show: function () {
             $(this.el).show();
@@ -36,12 +36,22 @@ define([
         },
         
         logout: function() {
-            $.get("/logout", this.model.toJSON(), function(response){
-                
+            $.get("/exit", function(response){
+                if (response.exit) {
+                    $(".js_logout_btn").hide();
+                    $(".js_login_btn").show();
+                }
+            }, "json")
+        },
+        
+        checkAuth: function() {
+            $.get("/checkAuth", function(response){
+                if(response.auth) {
+                    $(".js_login_btn").hide();
+                    $(".js_logout_btn").show();
+                }
             }, "json")
         }
-        
-        //------ EVENT FUNCTIONS ------------//
     });
 
     return new MainView();

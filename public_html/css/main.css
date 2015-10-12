@@ -35,11 +35,6 @@ body {
 
 }
 
-
-.window__span_hover-moveRight:hover {
-    margin-left: 32px;
-}
-
 .window__span_green {
 	width: 90%;
 	height: 30px;
@@ -56,6 +51,10 @@ body {
     background-color: #01BEF0;
 }
 
+.window__span_hover-green:hover {
+    background-color: #ADD737;
+}
+
 a.window__a_decoration-none {
     text-decoration: none;
     color: #000000;
@@ -70,6 +69,9 @@ a.window__a_decoration-none {
     font-size:0.8em;
 }
 
+.js_logout_btn, .js_login_btn {
+    border: 4px solid #ADD737;
+}
 
 /*-----------------------------------------------------------------------*/
 /*++++++++++++++++++++++   FORM ELEMENTS  +++++++++++++++++++++++++++++++*/

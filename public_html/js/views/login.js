@@ -41,6 +41,5 @@ define([
         }
 
     });
-
     return new LoginView();
 });
