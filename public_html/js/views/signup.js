@@ -46,31 +46,32 @@ define([
         },
         
         checkUsernameInput : function() {
+            $(".form__username-exists").hide();   
             if ($("#username").val() === "") {
-                $(".form__username-empty").show();
+                $(".form__username-invalid").show();
                 return false;
             } else {
-                $(".form__username-empty").hide();
+                $(".form__username-invalid").hide();
                 return true;                
             }
         },
         
         checkEmailInput : function() {
             if ($("#email").val() === "") {
-                $(".form__email-empty").show();
+                $(".form__email-invalid").show();
                 return false;
             } else {
-                $(".form__email-empty").hide();
+                $(".form__email-invalid").hide();
                 return true;                
             }
         },
         
         checkPasswordInput : function() {
             if ($("#password1").val() === "") {
-                $(".form__password-empty").show();
+                $(".form__password-invalid").show();
                 return false;
             } else {
-                $(".form__password-empty").hide();
+                $(".form__password-invalid").hide();
                 return true;                
             }
         },
@@ -90,13 +91,12 @@ define([
                         $(".signup_fixed").show();
                         $(".welcome__name").text(username); 
                   } else {  
-                        alert("No, input correct data, please.")
-                        if(response.login = "exists") {
-                            alert("Choice another name, user with this name already exists");
+                        if(response.login === "exists") {
+                            $(".form__username-exists").show();
                         } else if (!response.email) {
-                            alert("Smth wrong with your email");
+                            $(".form__email-invalid").show();
                         } else if (!response.password) {
-                            alert("Smth wrong with your password");
+                            $(".form__password-invalid").show();
                         }
                   }
                 }, "json");               

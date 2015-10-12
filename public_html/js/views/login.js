@@ -32,9 +32,10 @@ define([
         login: function() {
             $.post($(".form").attr("action"), $(".form").serialize(), function(response) {
                 if(response.auth) {
-                    alert("You are logged in!");
+                    $(".js_btn_back").trigger("click");
                 } else {
-                    alert("Sorry, your login or password isn't correct");
+                    $(".login_fixed").show();
+                    setTimeout(function(){$('.login_fixed').fadeOut('fast')}, 5000);  
                 }
             }, "json");
         }
