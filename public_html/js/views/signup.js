@@ -10,7 +10,13 @@ define([
         el: '.page',
         template: tmpl,
         events: {
-            'click .js_sign_up': 'signUp'
+            'click .js_log_in': 'login',
+            'click .js_sign_up': 'signUp',
+            'click .js_btn_close': 'signUpClose',
+            'change #password1': 'arePasswordsEqual',
+            'keyup #password2': 'arePasswordsEqual',
+            'change #email': 'checkEmailInput',
+            'change #username': 'checkUsernameInput',
         },
         initialize: function () {
             console.log("SignupView has been created");
@@ -29,24 +35,73 @@ define([
             this.show();
         },
         
-        signUp: function() {
-            $.post($(".form").attr("action"), $(".form").serialize(), function(response) {
-            console.log(response);
-              if(response.signup) {
-                    alert("You have been registered");
-              } else {  
-                    alert("No, input correct data, please.")
-                   /*
-                    if(response.login = "exist") {
-                        console.log("Choice another name, user with this name already exists");
-                    } else if (!response.email) {
-                        console.log("Smth wrong with youe email");
-                    } else if (!response.password) {
-                        console.log("Smth wrong with your password");
-                    }
-                    */
-              }
-            }, "json");
+        arePasswordsEqual : function() {
+            if ($("#password1").val() === $("#password2").val()) {
+                $(".form__passwords-different").hide();
+                return true;
+            } else {
+                $(".form__passwords-different").show();
+                return false;
+            }
+        },
+        
+        checkUsernameInput : function() {
+            if ($("#username").val() === "") {
+                $(".form__username-empty").show();
+                return false;
+            } else {
+                $(".form__username-empty").hide();
+                return true;                
+            }
+        },
+        
+        checkEmailInput : function() {
+            if ($("#email").val() === "") {
+                $(".form__email-empty").show();
+                return false;
+            } else {
+                $(".form__email-empty").hide();
+                return true;                
+            }
+        },
+        
+        checkPasswordInput : function() {
+            if ($("#password1").val() === "") {
+                $(".form__password-empty").show();
+                return false;
+            } else {
+                $(".form__password-empty").hide();
+                return true;                
+            }
+        },
+        login : function() {
+            $(".signup_fixed").hide();
+        }, 
+        signUpClose : function() {
+            $(".signup_fixed").hide();
+        },
+        
+        signUp : function() {
+            var username = $("#username").val();
+            if ( this.arePasswordsEqual() && this.checkUsernameInput() && this.checkEmailInput() && this.checkPasswordInput() ) {
+                $.post($(".form").attr("action"), $(".form").serialize(), function(response) {
+                console.log(response);
+                  if(response.signup) {
+                        $(".signup_fixed").show();
+                        $(".welcome__name").text(username); 
+                  } else {  
+                        alert("No, input correct data, please.")
+                        if(response.login = "exists") {
+                            alert("Choice another name, user with this name already exists");
+                        } else if (!response.email) {
+                            alert("Smth wrong with your email");
+                        } else if (!response.password) {
+                            alert("Smth wrong with your password");
+                        }
+                  }
+                }, "json");               
+            }
+
         }
 
     });
