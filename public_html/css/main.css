@@ -121,7 +121,7 @@ a.window__a_decoration-none {
     border: 2px solid #FF9032; 
 }
 
-.form__username-empty {
+.form__username-invalid {
     display: none;
 }
 
@@ -129,11 +129,11 @@ a.window__a_decoration-none {
     display: none;
 }
 
-.form__email-empty {
+.form__email-invalid {
     display: none;
 }
 
-.form__password-empty {
+.form__password-invalid {
     display: none;
 }
 
@@ -166,6 +166,31 @@ a.window__a_decoration-none {
 }
 
 .signup__close_align-right{
+    font-size: 0.5em;
+    color: #FFFFFF;
+    text-align: right;
+    margin: 10px;
+}
+
+.login_fixed {
+    position:fixed;
+    width:30%;
+    height:20%;
+    border: 2px solid #FF9032 ;
+    background: #ADD737;
+    opacity: 0.95;
+    margin: 25% 0% 0% 50%; 
+    display: none;
+
+}
+
+.login__error_color-white {
+    font-size: 1em;
+    color: #FFFFFF;
+    text-align: center;
+}
+
+.login__close_align-right{
     font-size: 0.5em;
     color: #FFFFFF;
     text-align: right;
