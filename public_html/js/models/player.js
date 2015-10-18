@@ -8,7 +8,8 @@ define([
         
         defaults: {
             name : "",
-            auth : false
+            auth : false,
+            chipColor: "blue"
         },
         
         initialize : function() {
@@ -17,5 +18,5 @@ define([
         
     });
     
-    return playerModel;
+    return new playerModel();
 });

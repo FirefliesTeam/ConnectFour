@@ -9,8 +9,12 @@ define([
         defaults: {
             //cell may be blue, orange or undefined
             cell: "", 
-            //column__line
-            place: ""        
+            
+            column: "",
+            
+            row: "",    
+            
+            isFill: false 
         },
         
         initialize : function() {

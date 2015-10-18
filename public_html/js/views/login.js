@@ -10,7 +10,8 @@ define([
         el: '.page',
         template: tmpl,
         events: {
-            'click .js_log_in': 'login'    
+            'click .js_log_in': 'login',
+            'click .js_btn_close': 'loginErrClose'    
         },
         initialize: function () {
             console.log("LoginView has been created");
@@ -28,7 +29,9 @@ define([
             this.render();
             this.show();
         },
-        
+        loginErrClose: function() {
+            $(".login_fixed").hide();  
+        },
         login: function() {
             $.post($(".form").attr("action"), $(".form").serialize(), function(response) {
                 if(response.auth) {
