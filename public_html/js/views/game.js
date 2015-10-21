@@ -36,30 +36,6 @@ define([
         },
         chooseColumn : function(event) {
             column__id = event.currentTarget.attributes.getNamedItem("id").value;
-
-          /*  lightCell = function(column_id, i, color) {
-                $("#" + column__id + "__" + i).addClass("column__cell-" + color);
-            }
-            
-            switchOffCell = function(column_id, i, color) {
-                $("#" + column__id + "__" + i).removeClass("column__cell-" + color);
-            }
-                    
-            for (var i = 0; i < 6; i++) {  
-                delay = (i+1)*100 + i*400;  
-                row = i.toString();
-                console.log(row);
-                setTimeout(function(){                
-                    $("#" + column__id + "__" + row).addClass("column__cell-blue");
-                }, delay); 
-                
-                delay = (i+1)*500           
-                setTimeout(function(){                
-                    $("#" + column__id + "__" + row).removeClass("column__cell-blue");
-                }, delay);
-                
-            }
-        */
             arrow_margin = 90 * column__id + 40;
             $(".gamefield__arrow").css({ marginLeft: arrow_margin});
         },
@@ -92,11 +68,7 @@ define([
             this.model.models[printPosition].set("isFill", true); 
             $(cellPlace).addClass("column__cell-" + player.get("chipColor"));
             return printPosition; 
-        },
-        
-        checkWin: function(cellPrintPosition) {
-        
-        } 
+        }, 
 
     });
 

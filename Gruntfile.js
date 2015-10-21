@@ -16,7 +16,7 @@ module.exports = function(grunt) {
                     stderr: true  
                 },
                 server: {
-                    command: 'java -cp ConnectFour-0.0.1-jar-with-dependencies.jar main.Main 8090'
+                    command: 'java -cp ConnectFour-0.1-jar-with-dependencies.jar main.Main 8090'
                 }
            },
            
