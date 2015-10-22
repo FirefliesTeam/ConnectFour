@@ -4,8 +4,7 @@
             <span class="window__span_green window__span_hover-blue"> Connect FOUR </span>
     	</a>
     	<div class="window__gamefield">
-    	    <div class="gamefield__arrow">
-    	    </div>
+    	    <div class="gamefield__arrow"></div>
             <div class="gamefield__columnset">
                 <fest:for from="0" to="6" index="i">
         	        <div id="{i}" class="gamefield__column column__{i}">
