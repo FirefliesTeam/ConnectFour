@@ -8,8 +8,12 @@ define([
         
         defaults: {
             name : "",
-            auth : false,
-            chipColor: "blue"
+            chipColor: "",
+            isAuth: false,
+            isMyTurn: false,
+            roundWins: 0,
+            gameWon: 0,
+            gamePlayed: 0
         },
         
         initialize : function() {

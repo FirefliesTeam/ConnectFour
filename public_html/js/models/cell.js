@@ -8,13 +8,8 @@ define([
         
         defaults: {
             //cell may be blue, orange or undefined
-            cell: "", 
-            
-            column: "",
-            
-            row: "",    
-            
-            isFill: false 
+            cell: "undefined", 
+              
         },
         
         initialize : function() {
