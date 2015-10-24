@@ -8,26 +8,20 @@ define([
 
     var Collection = Backbone.Collection.extend({
         model: Cell, 
+        cellNum: null,
         initialize: function() {
-            this.fill();
-        },
-        comparator: function(model) {
-            return -model.get("place");
+            cellNum = 42;
+            this.fill();  
         },
         
         fill : function() {
-            columns = 7;
-            rows = 6;
-            for(var i=0; i<columns; i++){
-                for(var j=0; j<rows; j++){
-                    rand = Math.random();
-                    if(rand < 0.5) {
-                        this.add({ cell:"", column: "{i}", row: "{j}" });
-                    } else {
-                        this.add({ cell:"", column: "{i}", row: "{j}" });
-                    }
-                }
+            for (var i = 0; i < cellNum; i++) {
+                this.add({ cell:"undefined" });
             }
+        },
+        
+        fillCell : function(collumnNum, chipColor) {
+            this.models[collumnNum].set("cell", chipColor);
         }
     });
         
