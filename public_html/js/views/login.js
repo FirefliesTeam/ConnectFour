@@ -1,41 +1,37 @@
 define([
     'backbone',
-    'tmpl/login'
+    'tmpl/login',
+    'views/abstract/baseView'
 ], function(
     Backbone,
-    tmpl
+    tmpl,
+    baseView
 ){
 
     var LoginView = Backbone.View.extend({
-        el: '.page',
+        __proto__: baseView,
+        el: '.signin',
         template: tmpl,
         events: {
-            'click .js_log_in': 'login',
-            'click .js_btn_close': 'loginErrClose'    
+            'click .login__js_log_in': 'login',
+            'click .login__js_btn_close': 'loginErrClose',
+            'show': 'show'    
         },
         initialize: function () {
             console.log("LoginView has been created");
+            this.render();
+            this.hide();
         },
         render: function () {
             this.$el.html(this.template)
-        },
-        show: function () {
-            $(this.el).show()
-        },
-        hide: function () {
-            $(this.el).hide()
-        },
-        load: function () {
-            this.render();
-            this.show();
         },
         loginErrClose: function() {
             $(".login_fixed").hide();  
         },
         login: function() {
-            $.post($(".form").attr("action"), $(".form").serialize(), function(response) {
+            $.post($(".login__form").attr("action"), $(".login__form").serialize(), function(response) {
                 if(response.auth) {
-                    $(".js_btn_back").trigger("click");
+                    $(".login__js_btn_back").trigger("click");
                 } else {
                     $(".login_fixed").show();
                     setTimeout(function(){$('.login_fixed').fadeOut('fast')}, 5000);  

@@ -69,7 +69,7 @@ a.window__a_decoration-none {
     font-size:0.8em;
 }
 
-.js_logout_btn, .js_login_btn {
+.menu__js_logout_btn, .menu__js_login_btn {
     border: 4px solid #ADD737;
 }
 

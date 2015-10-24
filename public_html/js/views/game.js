@@ -2,38 +2,36 @@ define([
     'backbone',
     'tmpl/game',
     'collections/cells',
-    'models/player'
+    'models/player',
+    'views/abstract/baseView'
 ], function(
     Backbone,
     tmpl,
     gamefield,
-    player
+    player,
+    baseView
 ){
 
     var GameView = Backbone.View.extend({
-        el: '.page',
+        __proto__: baseView,
+        el: '.game',
         template: tmpl,
         model: gamefield,
         events: {
             'mouseenter .gamefield__column': 'chooseColumn',
-            'click .gamefield__column': 'dropChip'
+            'click .gamefield__column': 'dropChip',
+            'show': 'show'
         },
         initialize: function () {
             console.log("GameView has been created");
+            this.render();
+            this.hide();
         },
+      
         render: function () {
             this.$el.html(this.template(this.model.toJSON()));
         },
-        show: function () {
-            $(this.el).show()
-        },
-        hide: function () {
-            $(this.el).hide()
-        },
-        load: function () {
-            this.render();
-            this.show();
-        },
+
         chooseColumn : function(event) {
             column__id = event.currentTarget.attributes.getNamedItem("id").value;
             arrow_margin = 90 * column__id + 40;
