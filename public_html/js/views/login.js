@@ -30,6 +30,7 @@ define([
         },
         login: function() {
             $.post($(".login__form").attr("action"), $(".login__form").serialize(), function(response) {
+                console.log(response);
                 if(response.auth) {
                     $(".login__js_btn_back").trigger("click");
                 } else {
